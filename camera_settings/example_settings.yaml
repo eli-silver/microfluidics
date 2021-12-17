@@ -1,0 +1,17 @@
+awb_mode: 'off'
+
+awb_gains: !!python/tuple
+- !!python/object/apply:fractions.Fraction
+  - 348/256
+- !!python/object/apply:fractions.Fraction
+  - 265/256
+
+exposure_mode: 'off'
+
+iso: 100
+analog_gain: !!python/object/apply:fractions.Fraction
+- '1'
+digital_gain: !!python/object/apply:fractions.Fraction
+- '1'
+
+shutter_speed: 3450

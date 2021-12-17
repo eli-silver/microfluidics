@@ -1,0 +1,45 @@
+Example commands to past directly into a terminal. Refer to the 
+OpenFlexure Microscope user guide for more information. 
+
+    Commands are organized according to the associated section in the OpenFlexure Microscope User Guide.
+
+
+========================================================================================================
+
+    --- 2.1.1 ---
+cd ~/microfluidics/data/
+mkdir example
+
+cd ~/microfluidics/camera_settings/
+touch example_settings.yaml 
+
+
+    --- 2.1.2 ---
+cd ~/microfluidics/image_acquisition/
+ofm stop
+python measure_colour_response.py --help
+python measure_colour_response.py --output ~/microfluidics/data/example/
+
+    --- 2.1.3 ---
+python measure_colour_response.py --output ~/microfluidics/data/example/ --additional_images example_1 example_2
+
+
+    --- 2.1.4 ---
+python measure_colour_response.py --output ~/microfluidics/data/example/ --skip_autoexpose --settings_file ~/microfluidics/camera_settings/example_settings.yaml
+
+
+  	  --- 2.2 ---
+cd ~/microfluidics/data/
+mkdir concentration_sweep
+
+python measure_colour_response.py--output ~/microfluidics/data/concentration_sweep/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --additional_images 0_0gL_1_layer 0_1gL_1_layer 0_3gL_1_layer 0_5gL_1_layer 0_8gL_1_layer 1_0gL_1_layer 3_0gL_1_layer 10_0gL_1_layer
+
+python measure_colour_response.py--output ~/microfluidics/data/concentration_sweep/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --additional_images 0_0gL_2_layer 0_1gL_2_layer 0_3gL_2_layer 0_5gL_2_layer 0_8gL_2_layer 1_0gL_2_layer 3_0gL_2_layer 10_0gL_2_layer
+
+python measure_colour_response.py--output ~/microfluidics/data/concentration_sweep/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --additional_images 0_0gL_3_layer 0_1gL_3_layer 0_3gL_3_layer 0_5gL_3_layer 0_8gL_3_layer 1_0gL_3_layer 3_0gL_3_layer 10_0gL_3_layer
+
+python measure_colour_response.py--output ~/microfluidics/data/concentration_sweep/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --additional_images 0_0gL_4_layer 0_1gL_4_layer 0_3gL_4_layer 0_5gL_4_layer 0_8gL_4_layer 1_0gL_4_layer 3_0gL_4_layer 10_0gL_4_layer
+
+python measure_colour_response.py--output ~/microfluidics/data/concentration_sweep/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --additional_images 0_0gL_5_layer 0_1gL_5_layer 0_3gL_5_layer 0_5gL_5_layer 0_8gL_5_layer 1_0gL_5_layer 3_0gL_5_layer 10_0gL_5_layer
+
+

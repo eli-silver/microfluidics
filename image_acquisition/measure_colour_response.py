@@ -119,6 +119,7 @@ def restore_settings(camera, filename, ignore=[]):
     print("AWB gains: {}".format(g))
     print("Analogue gain: {}, Digital gain: {}".format(camera.analog_gain, camera.digital_gain))
     print("Camera iso value: {}".format(camera.iso))
+    print("after iso, Analog gain: {}, Digital gain: {}".format(camera.analog_gain, camera.digital_gain))
 
 def measure_response(camera, led, output_prefix, 
                      rgb_values=[(255,255,255), (255,0,0), (0,255,0), (0,0,255), (0,0,0)]):

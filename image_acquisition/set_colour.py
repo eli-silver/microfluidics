@@ -13,7 +13,7 @@ class SingleNeoPixel(BasicSerialInstrument):
     def __init__(self, *args, **kwargs):
         BasicSerialInstrument.__init__(self, *args, **kwargs)
         self.pixels =  neopixel.NeoPixel(
-            self.pixel_pin, self.num_pixels, auto_write = False, pixel_order=self.ORDER, brightness=0.2)
+            self.pixel_pin, self.num_pixels, auto_write = False, pixel_order=self.ORDER, brightness=1)
         time.sleep(1)
         
     def set_rgb(self, r, g, b):

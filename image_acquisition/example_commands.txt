@@ -15,8 +15,8 @@ touch example_settings.yaml
 
 
     --- 2.1.2 ---
-cd ~/microfluidics/image_acquisition/
 ofm stop
+cd ~/microfluidics/image_acquisition/
 python measure_colour_response.py --help
 python measure_colour_response.py --output ~/microfluidics/data/example/
 
@@ -28,7 +28,7 @@ python measure_colour_response.py --output ~/microfluidics/data/example/ --addit
 python measure_colour_response.py --output ~/microfluidics/data/example/ --skip_autoexpose --settings_file ~/microfluidics/camera_settings/example_settings.yaml
 
 
-  	  --- 2.2 ---
+    --- 2.2 ---
 cd ~/microfluidics/data/
 mkdir concentration_sweep
 
@@ -43,3 +43,23 @@ python measure_colour_response.py--output ~/microfluidics/data/concentration_swe
 python measure_colour_response.py--output ~/microfluidics/data/concentration_sweep/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --additional_images 0_0gL_5_layer 0_1gL_5_layer 0_3gL_5_layer 0_5gL_5_layer 0_8gL_5_layer 1_0gL_5_layer 3_0gL_5_layer 10_0gL_5_layer
 
 
+    --- 2.3.1 ---
+cd ~/microfluidics/data/
+mkdir timed_data
+cd ~/microfluidics/image_acquisition/
+python measure_colour_response.py --output ~/microfluidics/data/timed_data/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --timed_data 5 900
+
+
+    --- 2.3.2 ---
+python measure_colour_response.py --output /media/64GB_USB/data/timed_data/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --timed_data 5 900
+
+lsblk
+pmount /dev/sda1 64GB_USB
+cd /media/64GB_USB/
+mkdir data
+cd data
+mkdir timed_data
+cd timed_data
+pwd
+cd /home/pi/microfluidics/image_acquisition/
+python measure_colour_response.py --output /media/64GB_USB/data/timed_data/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --timed_data 5 900

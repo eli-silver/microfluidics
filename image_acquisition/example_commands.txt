@@ -63,3 +63,12 @@ cd timed_data
 pwd
 cd /home/pi/microfluidics/image_acquisition/
 python measure_colour_response.py --output /media/64GB_USB/data/timed_data/ --skip_autoexpose --skip_calibration --settings_file ~/microfluidics/camera_settings/example_settings.yaml --timed_data 5 900
+
+
+    --- 3.1.1 ---
+cd /data/example/
+
+python -m picam_raw_analysis.unmix_image C:\Users\eliav\Documents\Harris_Labs_Local\cra_calibration_6-23-21_FULL_FILES\test9\ additional_image_1625684929_149173.jpg
+    --- 3.1.2 ---
+cd /data/timed_data/
+python -m picam_raw_analysis.unmix_image C:\Users\eliav\Documents\Harris_Labs_Local\cra_calibration_6-23-21_FULL_FILES\test9\ file_names.txt

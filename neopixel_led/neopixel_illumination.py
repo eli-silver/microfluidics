@@ -21,9 +21,9 @@ ORDER = neopixel.GRB
 
 # Create pixel object
 pixel = neopixel.NeoPixel(
-    pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
+    pixel_pin, num_pixels, brightness=1, auto_write=False, pixel_order=ORDER
 )
 # Turn pixel on, color set to WHITE, brightness 20%
 pixel[0] = (255,255,255)
-print("LED ON. Color: WHITE")
+print("=== LED ON === Color: WHITE === Brightness: 1 ===" )
 pixel.show()

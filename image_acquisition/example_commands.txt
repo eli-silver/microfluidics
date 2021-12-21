@@ -72,3 +72,19 @@ python -m picam_raw_analysis.unmix_image C:\Users\eliav\Documents\Harris_Labs_Lo
     --- 3.1.2 ---
 cd /data/timed_data/
 python -m picam_raw_analysis.unmix_image C:\Users\eliav\Documents\Harris_Labs_Local\cra_calibration_6-23-21_FULL_FILES\test9\ file_names.txt
+
+
+    ---CALIBRATION RUN ACTUAL COMMANDS---
+python measure_colour_response.py --output /media/USB_DISK/data/calibration_12_18_21/cra_images/ --skip_autoexpose  --settings_file /media/USB_DISK/data/calibration_12_18_21/camera_settings/settings_12_18_21.yaml
+
+python measure_colour_response.py --output /media/USB_DISK/data/calibration_12_18_21/1_layer/ --skip_autoexpose --skip_calibration --settings_file /media/USB_DISK/data/calibration_12_18_21/camera_settings/settings_12_18_21.yaml --additional_images 0_0gL_1_layer 0_1gL_1_layer 0_3gL_1_layer 0_5gL_1_layer 0_8gL_1_layer 1_0gL_1_layer 3_0gL_1_layer 10_0gL_1_layer
+
+python measure_colour_response.py --output /media/USB_DISK/data/calibration_12_18_21/2_layer/ --skip_autoexpose --skip_calibration --settings_file /media/USB_DISK/data/calibration_12_18_21/camera_settings/settings_12_18_21.yaml --additional_images 0_0gL_2_layer 0_1gL_2_layer 0_3gL_2_layer 0_5gL_2_layer 0_8gL_2_layer 1_0gL_2_layer 3_0gL_2_layer 10_0gL_2_layer
+
+python measure_colour_response.py --output /media/USB_DISK/data/calibration_12_18_21/3_layer/ --skip_autoexpose --skip_calibration --settings_file /media/USB_DISK/data/calibration_12_18_21/camera_settings/settings_12_18_21.yaml --additional_images 0_0gL_3_layer 0_1gL_3_layer 0_3gL_3_layer 0_5gL_3_layer 0_8gL_3_layer 1_0gL_3_layer 3_0gL_3_layer 10_0gL_3_layer
+
+python measure_colour_response.py --output /media/USB_DISK/data/calibration_12_18_21/4_layer/ --skip_autoexpose --skip_calibration --settings_file /media/USB_DISK/data/calibration_12_18_21/camera_settings/settings_12_18_21.yaml --additional_images 0_0gL_4_layer 0_1gL_4_layer 0_3gL_4_layer 0_5gL_4_layer 0_8gL_4_layer 1_0gL_4_layer 3_0gL_4_layer 10_0gL_4_layer
+
+python measure_colour_response.py --output /media/USB_DISK/data/calibration_12_18_21/5_layer/ --skip_autoexpose --skip_calibration --settings_file /media/USB_DISK/data/calibration_12_18_21/camera_settings/settings_12_18_21.yaml --additional_images 0_0gL_5_layer 0_1gL_5_layer 0_3gL_5_layer 0_5gL_5_layer 0_8gL_5_layer 1_0gL_5_layer 3_0gL_5_layer 10_0gL_5_layer
+
+

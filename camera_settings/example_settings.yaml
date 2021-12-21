@@ -8,10 +8,10 @@ awb_gains: !!python/tuple
 
 exposure_mode: 'off'
 
-iso: 100
+iso: 40
 analog_gain: !!python/object/apply:fractions.Fraction
 - '1'
 digital_gain: !!python/object/apply:fractions.Fraction
 - '1'
 
-shutter_speed: 3450
+shutter_speed: 5000

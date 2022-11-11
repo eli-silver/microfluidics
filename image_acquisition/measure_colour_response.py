@@ -166,9 +166,9 @@ def timed_image_capture(camera, output, tDelta, tTotal, imCount):
                 timeStr = str(time.time())
                 print( currPictureTime-lastPictureTime )
                 timeStr_connected = timeStr.replace(".", "_")
-                fileName = "additional_image_" + timeStr_connected + ".jpg"
+                fileName = str(imCount) + "_" + timeStr_connected + ".jpg"
                 fileNames.append(fileName)
-                camera.capture(output + "additional_image_" + timeStr_connected + ".jpg", bayer=True)
+                camera.capture(output + str(imCount)+"_"+ timeStr_connected + ".jpg", bayer=True)
         else:
             collectData = False
     

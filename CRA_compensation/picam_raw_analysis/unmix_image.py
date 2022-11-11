@@ -86,6 +86,7 @@ def correct_image(image, unmixing_matrix=None, norm_to_white=None):
     if unmixing_matrix is None:
         return image * norm_to_white
     else:
+        #check this function for possible r-g swap?
         return np.sum(unmixing_matrix * image[:,:,np.newaxis,:] * norm_to_white[:,:,np.newaxis,:], axis=-1)
 
 def main():
@@ -184,6 +185,8 @@ def main():
             corrected[corrected < 0] = 0
 
         root_fname, junk = fname.rsplit(".j", 2) #get rid of the .jpeg extension
+        print("corrected image shape: " + str(np.shape(corrected)))
+        corrected = corrected[:, :, [2,1,0]]     # Swap channels from RGB to BGR for cv2.imwrite compatability
         if args.sixteen_bit:
             print("Writing the 10-bit calibrated image as a 16-bit image to {}_16.tiff".format(root_fname))
             cv2.imwrite(root_fname + "_16.tiff", (corrected*64).astype(np.uint16))
